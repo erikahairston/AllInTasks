@@ -12,11 +12,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< Updated upstream
-        System.out.println("Hey Asia2");
-=======
-        System.out.println("It's Friday y'all");
->>>>>>> Stashed changes
+        System.out.print("fix");
+
     }
 
 
