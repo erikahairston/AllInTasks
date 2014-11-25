@@ -60,7 +60,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.print("Ron Test");
+        System.out.print("Ron Test__Asia2");
 
     }
 
