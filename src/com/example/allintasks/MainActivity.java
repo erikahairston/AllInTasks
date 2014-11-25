@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+//permissions needed to use the SMS feature, and creating button and text edit boxes
 import android.telephony.SmsManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+//below allows access to contacts within the app, part of the permissions 
+import android.provider.ContactsContract;
 
 public class MainActivity extends Activity {
 
@@ -30,20 +33,21 @@ public class MainActivity extends Activity {
 
         button.setOnClickListener(new OnClickListener() {
  
-            @Override
+            //still figuring out the specifics of this code, and how to alter it for our uses. implementation of onClick method
+        	@Override
             public void onClick(View v) {
  
                 String phoneNo = editPhoneNum.getText().toString();
                 String sms = editSMS.getText().toString();
- 
+                //useful if sending fails
                 try {
                     SmsManager smsManager = SmsManager.getDefault();
                     smsManager.sendTextMessage(phoneNo, null, sms, null, null);
-                    Toast.makeText(getApplicationContext(), "SMS Sent!",
+                    Toast.makeText(getApplicationContext(), "Message Sent!",
                             Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
                     Toast.makeText(getApplicationContext(),
-                            "SMS failed, please try again later!",
+                            "Message failed, please try again later!",
                             Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
