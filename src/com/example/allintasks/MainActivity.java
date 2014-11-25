@@ -1,6 +1,7 @@
 package com.example.allintasks;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,9 +11,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 //below allows access to contacts within the app, part of the permissions 
 import android.provider.ContactsContract;
+//addition allows selection of contacts
+import android.support.v4.app.Fragment;
+import android.support.v4.app.LoaderManager.LoaderCallbacks;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.widget.AdapterView;
+
 
 public class MainActivity extends Activity {
 
@@ -24,7 +32,7 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.main);
+        //setContentView(R.layout.main);
  
         button = (Button) findViewById(R.id.button);
         editPhoneNum = (EditText) findViewById(R.id.editPhoneNum);
@@ -39,6 +47,7 @@ public class MainActivity extends Activity {
  
                 String phoneNo = editPhoneNum.getText().toString();
                 String sms = editSMS.getText().toString();
+                
                 //useful if sending fails
                 try {
                     SmsManager smsManager = SmsManager.getDefault();
@@ -56,17 +65,41 @@ public class MainActivity extends Activity {
 
         });
     }
+    
+
+ 
+   /*
+    Defines an array that contains resource ids for the layout views  that get the Cursor column contents. 
+    The id is pre-defined in the Android framework, so it is prefaced with "android.R.id"
+    */
+   private final static int[] TO_IDS = {
+          android.R.id.text1
+   };
+   // Define global mutable variables
+   // Define a ListView object
+   ListView mContactsList;
+   // Define variables for the contact the user selects
+   // The contact's _ID value
+   long mContactId;
+   // The contact's LOOKUP_KEY
+   String mContactKey;
+   // A content URI for the selected contact
+   Uri mContactUri;
+   // An adapter that binds the result Cursor to the ListView
+   private SimpleCursorAdapter mCursorAdapter;
 
 
-public class MainActivity extends Activity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         System.out.print("Ron Test__Asia2 Erika3");
-
     }
+
+   
 
 
     @Override
