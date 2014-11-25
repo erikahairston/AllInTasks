@@ -3,8 +3,10 @@ package com.example.allintasks;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 //permissions needed to use the SMS feature, and creating button and text edit boxes
 import android.telephony.SmsManager;
 import android.view.View;
@@ -88,7 +90,8 @@ public class MainActivity extends Activity {
    // An adapter that binds the result Cursor to the ListView
    private SimpleCursorAdapter mCursorAdapter;
 
-
+// Empty public constructor, required by the system
+   public void ContactsFragment() {}
 
 
 
