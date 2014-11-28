@@ -1,5 +1,6 @@
 package com.example.allintasks;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,33 +25,32 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.widget.AdapterView;
 
 
-public class MainActivity extends Activity {
+@SuppressLint("NewApi") public class MainActivity extends Activity {
 
     Button button;
-    EditText editPhoneNum;
+    EditText editContactName;
     EditText editSMS;
  
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate1(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //setContentView(R.layout.main);
  
         button = (Button) findViewById(R.id.button);
-        editPhoneNum = (EditText) findViewById(R.id.editPhoneNum);
+        editContactName = (EditText) findViewById(R.id.editContactName);
         editSMS = (EditText) findViewById(R.id.editSMS);
  
 
         button.setOnClickListener(new OnClickListener() {
  
             //still figuring out the specifics of this code, and how to alter it for our uses. implementation of onClick method
-        	@Override
+        	@SuppressLint("NewApi") @Override
             public void onClick(View v) {
  
-                String phoneNo = editPhoneNum.getText().toString();
+                String phoneNo = editContactName.getText().toString();
                 String sms = editSMS.getText().toString();
                 
-                //useful if sending fails
+                //useful if sending fails for network reasons or things out of out control
                 try {
                     SmsManager smsManager = SmsManager.getDefault();
                     smsManager.sendTextMessage(phoneNo, null, sms, null, null);
