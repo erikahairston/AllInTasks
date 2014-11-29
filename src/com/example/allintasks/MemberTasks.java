@@ -3,7 +3,8 @@ package com.example.allintasks;
 public class MemberTasks {
 
 	public static void main(String[] args) {
-		boolean newTask= true;
+		///I need to make an onClick method that changes boolean newTask to true
+		boolean newTask= true; //when user clicks on "New Task" button, this boolean becomes true and makes a new input line for user
 		String userInputNameofAttendee = "hi";
 		String userInputTask = "do this";
 		int countAttendees = 0;
@@ -15,7 +16,7 @@ public class MemberTasks {
 			{
 				System.out.print("Task 1: (checkbox)" + userInputTask);
 				//goes into scanner userInputTask is a place where the user types in the task
-				System.out.print(" " + userInputTaskDueDate);
+				System.out.println(" " + userInputTaskDueDate);
 			}
 			
 		}
