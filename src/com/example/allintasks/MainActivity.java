@@ -99,7 +99,7 @@ import android.widget.AdapterView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.print("Analisse");
+        System.out.print("Analisse2 from erika");
     }
 
    
