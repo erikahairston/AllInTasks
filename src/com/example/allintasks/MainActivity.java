@@ -99,7 +99,7 @@ import android.widget.AdapterView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.print("Ron Test__Asia2 Erika3");
+        System.out.print("Analisse");
     }
 
    
