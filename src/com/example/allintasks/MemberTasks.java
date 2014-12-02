@@ -16,7 +16,7 @@ public class MemberTasks {
 			{
 				System.out.print("Task 1: (checkbox)" + userInputTask);
 				//goes into scanner userInputTask is a place where the user types in the task
-				System.out.println(" " + userInputTaskDueDate);
+				//System.out.println(" " + userInputTaskDueDate);
 			}
 			
 		}
