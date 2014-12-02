@@ -124,5 +124,14 @@ import java.util.*;
         return super.onOptionsItemSelected(item);
     }
     
-    
+    public static void people()
+    {
+    	Scanner attendeesList = new Scanner (System.in);
+    	
+    	for (int r = 1; r <  ; r++)
+    	{
+    	String  = attendeesList.next();
+    	}
+    	
+    }
 }
