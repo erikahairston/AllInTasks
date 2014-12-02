@@ -45,6 +45,7 @@ public final class R {
         public static final int home_screen=0x7f030001;
         public static final int make_new_group=0x7f030002;
         public static final int welcome_screen=0x7f030003;
+        public static final int who_attended=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;
