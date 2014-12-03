@@ -23,7 +23,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.widget.AdapterView;
+<<<<<<< Updated upstream
 import java.util.*;
+=======
+>>>>>>> Stashed changes
 
 @SuppressLint("NewApi") public class MainActivity extends Activity {
 
