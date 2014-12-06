@@ -2,33 +2,28 @@ package com.example.allintasks;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-//permissions needed to use the SMS feature, and creating button and text edit boxes
-import android.telephony.SmsManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+//permissions needed to use the SMS feature, and creating button and text edit boxes
 //below allows access to contacts within the app, part of the permissions 
-import android.provider.ContactsContract;
 //addition allows selection of contacts
-import android.support.v4.app.Fragment;
-import android.support.v4.app.LoaderManager.LoaderCallbacks;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.widget.AdapterView;
-<<<<<<< Updated upstream
-import java.util.*;
-=======
->>>>>>> Stashed changes
+//<<<<<<< Updated upstream
+//=======
+//>>>>>>> Stashed changes
 
 @SuppressLint("NewApi") public class MainActivity extends Activity {
+	public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     Button button;
     EditText editContactName;
@@ -37,7 +32,8 @@ import java.util.*;
     public void onCreate1(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //setContentView(R.layout.main);
+        setContentView(R.layout.home_screen);
+        //makeNewGroup();
  
         button = (Button) findViewById(R.id.button);
         editContactName = (EditText) findViewById(R.id.editContactName);
@@ -101,8 +97,29 @@ import java.util.*;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home_screen);
         System.out.print("Analisse2 from erika");
+        
+        makeNewGroup();
+    }
+    
+    public void makeNewGroup() {
+    	//Intent intent = new Intent(this, MemberTasks.class);
+    	EditText edit_message = (EditText) findViewById(R.id.edit_message);
+    	String message = edit_message.getText().toString();
+    	//intent.putExtra(EXTRA_MESSAGE, message);
+    	// startActivity(intent);
+
+    	button = (Button) findViewById(R.id.button1);
+    	button.setOnClickListener(new OnClickListener() 
+    	{
+    		@Override
+    		public void onClick(View view) 
+    		{
+    			System.out.println("hey girl");
+    		}
+    	
+    	});
     }
 
    
@@ -127,14 +144,14 @@ import java.util.*;
         return super.onOptionsItemSelected(item);
     }
     
-    public static void people()
+   /* public static void people()
     {
     	Scanner attendeesList = new Scanner (System.in);
     	
-    	for (int r = 1; r <  ; r++)
+    	 for (int r = 1; r <  ; r++)
     	{
     	String  = attendeesList.next();
     	}
     	
-    }
+    }*/
 }

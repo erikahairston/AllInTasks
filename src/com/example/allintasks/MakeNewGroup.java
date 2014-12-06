@@ -1,15 +1,25 @@
 package com.example.allintasks;
 
-public class MakeNewGroup {
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.view.View.OnClickListener;
 
-	public static void main(String args[]){
-		
-	}
+import android.content.Intent;
+
+
+public class MakeNewGroup extends Activity  
+{
 	
-	public static String makeNewGroup(String a, String b, String c, String d){
-		
-		
-		
-		return 
-	}
+	 
 }
+
+	/* public static String makeNewGroup(String a, String b, String c, String d){
+		
+		
+		
+		return */
+	//}
+
