@@ -10,6 +10,6 @@ public class MakeNewGroup {
 		
 		
 		
-		return 
+		return
 	}
 }
