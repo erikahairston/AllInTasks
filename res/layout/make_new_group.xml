@@ -22,11 +22,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Today's Date"
-        android:ems="10" >
+        android:ems="10"/>
 
         <requestFocus />
-  
-
+ 
     <EditText
         android:id="@+id/due_date"
         android:layout_width="match_parent"
@@ -45,28 +44,34 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Large Text"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Large Text"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Large Text"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< Updated upstream
         android:text="Save" />
 
 </EditText>
 </LinearLayout>
+=======
+        android:text="Save" >
+	</Button>
+</LinearLayout>
+>>>>>>> Stashed changes
