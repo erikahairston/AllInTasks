@@ -1,36 +1,26 @@
 package com.example.allintasks;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
-import android.view.View.OnClickListener;
 
-import android.content.Intent;
-
-
-public class MakeNewGroup extends Activity  
-{
+public class WelcomeScreen extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-	
-	        //Set the initial view of the app to be the stuff we created in activity_main.xm
-	setContentView(R.layout.make_new_group);
+	        //Set this view of the app to be the stuff we created in activity_main.xml
+	setContentView(R.layout.welcome_screen);
 
 	//make t be the textbox where our program will output data
-	TextView t = (TextView) findViewById(R.id.output);
+	TextView t = (TextView) findViewById(R.id.textOut);
 
 	//make it so the scroll bar on t will work
-	//t.setMovementMethod(new ScrollingMovementMethod());
+	t.setMovementMethod(new ScrollingMovementMethod());
 
 	//make it so when we write System.out.println in our code, it goes to t
-	System.setOut(new TextViewPrintStream(this, t));
-	
-	//make editText be the textbox where the user can enter in data
-	EditText editText = (EditText) findViewById(R.id.textIn);
+	        System.setOut(new TextViewPrintStream(this, t));
+
+	        //make editText be the textbox where the user can enter in data
+	        EditText editText = (EditText) findViewById(R.id.textIn);
 	        editText.setOnEditorActionListener(new OnEditorActionListener() {
 	            @Override
 	            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -46,19 +36,11 @@ public class MakeNewGroup extends Activity
 	                return handled;
 	            }
 	        });
-	        System.out.print(""); 
-}
+	        System.out.print("");
 
-	/* public static String makeNewGroup(String a, String b, String c, String d){
-		
-		
-		
-<<<<<<< HEAD
-		return
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
 	}
-}
-=======
-		return */
-	//}
 
->>>>>>> FETCH_HEAD
+}
